@@ -11,7 +11,7 @@ export function Remove_Cart({setlist,list,removeItem,btnState}) {
     <p className='content1'>{data.rating}</p>    
     <p className='content1'>{data.price}</p>
    </div>
-    <div className='button'><button id="btns" value={data.id} className="remove_btn" onClick={(e) =>{removeItem(index,data),btnState(data)} }>Remove</button></div>
+    <div className='button'><button id="btns" value={data.id} className="remove_btn" onClick={(e) =>{removeItem(index,data)} }>Remove</button></div>
   </div>)}
 
       </div>

@@ -148,7 +148,7 @@ const [pricelist,setpricelist]=useState([{
 
 <Routes>
   <Route path="/" element={ <Price_card pricelist={pricelist} addItem={addItem}setlist={setlist} list={list}  />}/>
-  <Route path="/card" element={show ? <NoRecord /> : <Remove_Cart setlist={setlist} list={list} removeItem={removeItem}  btnState={btnState} />} />
+  <Route path="/card" element={show ? <NoRecord /> : <Remove_Cart setlist={setlist} list={list} removeItem={removeItem}   />} />
 </Routes>
 
      
