@@ -7,11 +7,12 @@ import { Top_bar } from './Top_bar';
 
 
 
-function App() {
 
+function App() {
+ 
   return (
 <div>
-  <Top_bar   />
+<Top_bar />
 
 </div>
  )}
