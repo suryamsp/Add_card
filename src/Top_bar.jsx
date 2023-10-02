@@ -105,46 +105,47 @@ const [pricelist,setpricelist]=useState([{
 
 
   return (
-    <div>
+   <div>
+     <div>
 
-      <div className='top_bar'>
+<div className='top_bar'>  
+<div className='top_bar_con'>
+<h2 style={{ margin: "10px" }}>Add Cart</h2>
+  <Button className='button' onClick={()=>navigate('/')}>Home</Button>
+  <Button  href="#text-buttons">About</Button>
+    <Button
+      id='das_btn'
 
-  
-        <h2 style={{ margin: "10px" }}>Add Cart</h2>
-        <Button className='button' onClick={()=>navigate('/')}>Home</Button>
-        <Button  href="#text-buttons">About</Button>
-        <div>
-          <Button
-            id='das_btn'
+      onClick={handleClick}
+    >
+      Dashboard
+    </Button>
+    <Menu
+    
+      anchorEl={anchorEl}
+      open={open}
+      onClose={handleClose}
+      MenuListProps={{
+        'aria-labelledby': 'basic-button',
+      }}
+    >
+      <MenuItem onClick={handleClose}>Profile</MenuItem>
+      <MenuItem onClick={handleClose}>My account</MenuItem>
+      <MenuItem onClick={handleClose}>Logout</MenuItem>
+    </Menu>
 
-            onClick={handleClick}
-          >
-            Dashboard
-          </Button>
-          <Menu
-          
-            anchorEl={anchorEl}
-            open={open}
-            onClose={handleClose}
-            MenuListProps={{
-              'aria-labelledby': 'basic-button',
-            }}
-          >
-            <MenuItem onClick={handleClose}>Profile</MenuItem>
-            <MenuItem onClick={handleClose}>My account</MenuItem>
-            <MenuItem onClick={handleClose}>Logout</MenuItem>
-          </Menu>
-        </div>
-       
-        <div className='cart_btn'><button className='Cart_btn' onClick={()=>navigate('/card')} ><ShoppingCartIcon />cart
-  <button className='count_btn'>{count}</button></button></div>
-        
-      </div>
+</div>
+ 
+  <div className='nav_bar'><button className='Cart_btn' onClick={()=>navigate('/card')} ><ShoppingCartIcon />cart
+<button className='count_btn'>{count}</button></button>
+</div>      
+</div>
 
-      <div className='sec_bar'>
-        <p className='f_title'>Shop in style</p>
-        <p className='se_title'>With this shop hompeage template</p>
-      </div>
+<div className='sec_bar'>
+  <p className='f_title'>Shop in style</p>
+  <p className='se_title'>With this shop hompeage template</p>
+</div>
+   </div>
 
 <Routes>
   <Route path="/" element={ <Price_card pricelist={pricelist} addItem={addItem}setlist={setlist} list={list}  />}/>

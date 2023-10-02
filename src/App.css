@@ -12,9 +12,13 @@ gap:30px;
 }
 
 .top_bar{
-  display: flex;
+  display:flex;
+  justify-content: space-between;
   background-color:rgb(229, 233, 237);
   height: 50px;
+}
+.top_bar_con{
+  display:flex;
 }
 .sec_bar{
   background-color: black;
@@ -83,14 +87,15 @@ h3{
 }
 .Cart_btn{
   display: flex;
-  justify-content: flex-start;
- margin-left: 800px;
+  /* justify-content: flex-start; */
+ /* margin-left: 800px; */
  margin-top: 10px;
  width: 100px;
  font-size: 20px;
  border: none;
  background-color:rgb(229, 233, 237);
  cursor: pointer;
+ margin-right: 150px;
 }
 IconButton{
   width: 0px;
@@ -139,4 +144,9 @@ Button:hover{
   height: 500px;
   margin-left: 350px;
 
+}
+
+.nav_bar{
+  display: flex;
+  max-width: 400px;
 }
